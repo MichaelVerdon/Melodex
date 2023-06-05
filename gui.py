@@ -15,3 +15,12 @@ class Window(tk.Tk):
         self.minsize = (1024, 768)
         self.resizable(0,0)
         self.configure(self.attributes)
+
+class mainPage(tk.Frame):
+    pass
+
+
+if __name__ == "__main__":
+    window = Window()
+    app = mainPage(window)
+    window.mainloop()
