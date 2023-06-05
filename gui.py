@@ -15,10 +15,15 @@ class Window(tk.Tk):
         self.minsize = (1024, 768)
         self.resizable(0,0)
         self.configure(self.attributes)
+        
+        self.text = tk.Label(self, text ='Melodex', background='white', font=("Roboto Mono", 24))
+        self.text.grid(row=0, column=0)
 
 class App(tk.Frame):
-    
-    pass
+    def __init__(self, parent):
+        super().__init__(parent)
+        pass
+        
 
 
 if __name__ == "__main__":
