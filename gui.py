@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 
 #class for making a window
-class App():
+class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Melodex")
@@ -16,5 +16,12 @@ class App():
         self.resizable(0,0)
         self.configure(self.attributes)
 
+class App(tk.Frame):
+    
+    pass
+
+
 if __name__ == "__main__":
-    App()
+    window = Window()
+    app = App(window)
+    window.mainloop()
