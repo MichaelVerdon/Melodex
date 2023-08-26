@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const Player = () => {
 
+    // Hooks for toggling states
     const [isPlaying, PlayPause] = useState(false);
     const [shuffleOn, toggleShuffle] = useState(false);
     const [loopOn, toggleLoop] = useState(false);
@@ -21,18 +22,15 @@ const Player = () => {
     return(
         <div className="PlayerContainer">
             <div className="ControlContainer">
-
                 <img
                 src="../images/player/shuffle.svg"
                 className={shuffleOn ? "PlayerControlActive" : "PlayerControl"}
                 onClick={shuffle}
                 />
-
                 <img 
                 src="../images/player/skipBackward.svg"
                 className="PlayerControl"
                 />
-
                 <img 
                 src={isPlaying ? 
                     "../images/player/play.svg" 
@@ -40,18 +38,15 @@ const Player = () => {
                 className="PlayerControl"
                 onClick={togglePlay}
                 />
-
                 <img 
                 src="../images/player/skipForward.svg"
                 className="PlayerControl"
                 />
-
                 <img
                 src="../images/player/loop.svg"
                 className={loopOn ? "PlayerControlActive" : "PlayerControl"}
                 onClick={loop}
                 />
-
             </div>
         </div>
     )
