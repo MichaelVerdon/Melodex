@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Col } from 'react-bootstrap';
 
 const Player = ({ Song, Time }) => {
 
@@ -23,23 +22,18 @@ const Player = ({ Song, Time }) => {
     return(
         <div className="PlayerContainer">
             <div className="SongContainer">
-                <Col>
                 <img src={
                     Song.img !== "N/A" 
                     ? Song.img
                     : 'https://via.placeholder.com/400'
                     } alt='project'/>
-                </Col>
-                <Col>
                 <ul>
                     <li>{Song.name}</li>
                     <li>{Song.artist}</li>
                 </ul>
-                </Col>
-                <Col>
                 <p>{Time.current}/{Time.max}</p>
-                </Col>
             </div>
+
             <div className="ControlContainer">
                 <img
                 src="../images/player/shuffle.svg"
