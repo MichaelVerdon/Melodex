@@ -7,6 +7,7 @@ const Player = ({ Song, Time }) => {
     const [shuffleOn, toggleShuffle] = useState(false);
     const [loopOn, toggleLoop] = useState(false);
     const [volume, setVolume] = useState(50);
+    const [time, setTime] = useState(0);
 
     const togglePlay = () => {
         PlayPause(!isPlaying);
@@ -24,8 +25,23 @@ const Player = ({ Song, Time }) => {
         setVolume(event.target.value);
     }
 
+    const windTime = (event) => {
+        setTime(event.target.value);
+    }
+
     return(
+        <>
         <div className="PlayerContainer">
+            <div className="TimelineContainer">
+                <input
+                className="Timeline"
+                type="range"
+                min="0"
+                max={Time.max}
+                value={Time.current}
+                onChange={windTime}
+                />
+            </div>
             <div className="SongContainer">
                 <img src={
                     Song.img !== "N/A" 
@@ -84,6 +100,7 @@ const Player = ({ Song, Time }) => {
                 />
             </div>
         </div>
+        </>
     )
 }
 

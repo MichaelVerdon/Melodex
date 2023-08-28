@@ -20,7 +20,7 @@ html, body{
 }
 
 .PlayerContainer{
-  position: fixed;
+  position: absolute;
   background: #333;
   display: flex;
   align-items: center;
@@ -28,6 +28,7 @@ html, body{
   width: 100%;
   height: 7%;
   bottom: 0;
+  box-sizing: border-box;
 
 }
 
@@ -196,6 +197,41 @@ html, body{
   height: auto;
 }
 
+.TimelineContainer{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2.6rem;
+  height: 50%;
+  width: 100%;
+}
+
+.Timeline{
+  width: 100%;
+  background-color: #888888;
+  border-radius: 2px;
+  outline: none;
+  appearance: none;
+}
+
+.Timeline::-webkit-slider-thumb{
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Timeline::-webkit-slider-thumb:hover{
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.Timeline::-webkit-slider-runnable-track{
+  height: 10px;
+}
+
 @media (max-width: 768px) {
   .PlayerContainer {
     flex-direction: column;
@@ -208,5 +244,6 @@ html, body{
     align-items: center;
     justify-content: center;
   }
+
 }
 
