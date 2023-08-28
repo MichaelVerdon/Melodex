@@ -161,6 +161,41 @@ html, body{
   padding-left: 2rem;
 }
 
+.VolumeContainer{
+  position: fixed;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.VolumeSlider{
+  width: 200px;
+  height: 4px;
+  background-color: #888888;
+  border-radius: 2px;
+  outline: none;
+  appearance: none;
+}
+
+.VolumeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.VolumeSlider::-webkit-slider-thumb:active{
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.VolumeIcon{
+  width: 40px;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .PlayerContainer {
     flex-direction: column;

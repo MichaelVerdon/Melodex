@@ -6,6 +6,7 @@ const Player = ({ Song, Time }) => {
     const [isPlaying, PlayPause] = useState(false);
     const [shuffleOn, toggleShuffle] = useState(false);
     const [loopOn, toggleLoop] = useState(false);
+    const [volume, setVolume] = useState(50);
 
     const togglePlay = () => {
         PlayPause(!isPlaying);
@@ -18,6 +19,10 @@ const Player = ({ Song, Time }) => {
     const loop = () => {
         toggleLoop(!loopOn);
     };
+
+    const changeVolume = (event) => {
+        setVolume(event.target.value);
+    }
 
     return(
         <div className="PlayerContainer">
@@ -59,6 +64,23 @@ const Player = ({ Song, Time }) => {
                 src="../images/player/loop.svg"
                 className={loopOn ? "PlayerControlActive" : "PlayerControl"}
                 onClick={loop}
+                />
+            </div>
+            <div className="VolumeContainer">
+                <img
+                className='VolumeIcon'
+                src={volume != 0 
+                    ? "../images/player/volume.svg"
+                    : "../images/player/mute.svg"
+                }
+                />
+                <input
+                className="VolumeSlider"
+                type='range'
+                min="0"
+                max="100"
+                value={volume}
+                onChange={changeVolume}
                 />
             </div>
         </div>
