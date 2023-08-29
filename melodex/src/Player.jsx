@@ -54,7 +54,6 @@ const Player = ({ Song, Time }) => {
                 </ul>
                 <p>{Time.current}/{Time.max}</p>
             </div>
-
             <div className="ControlContainer">
                 <img
                 src="../images/player/shuffle.svg"

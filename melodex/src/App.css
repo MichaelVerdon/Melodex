@@ -1,7 +1,8 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
 .App {
@@ -19,8 +20,8 @@ html, body{
   color: white;
 }
 
-.PlayerContainer{
-  position: absolute;
+.PlayerContainer {
+  position: fixed;
   background: #333;
   display: flex;
   align-items: center;
@@ -28,11 +29,9 @@ html, body{
   width: 100%;
   height: 7%;
   bottom: 0;
-  box-sizing: border-box;
-
 }
 
-.ControlContainer{
+.ControlContainer {
   margin: 0;
   padding: 0.5rem;
   display: flex;
@@ -42,7 +41,7 @@ html, body{
   object-fit: contain;
 }
 
-.PlayerControl{
+.PlayerControl {
   margin: 0.5rem;
   max-width: 2rem;
   height: auto;
@@ -50,7 +49,7 @@ html, body{
   cursor: pointer;
 }
 
-.PlayerControlActive{
+.PlayerControlActive {
   margin: 0.5rem;
   max-width: 2rem;
   height: auto;
@@ -60,23 +59,23 @@ html, body{
   border-radius: 2rem;
 }
 
-.PlayerControlActive:active{
+.PlayerControlActive:active {
   padding: 0.5rem;
   background-color: rgba(255,255,255,0.1);
   border-radius: 2rem;
 }
 
-.PlayerControl:hover{
+.PlayerControl:hover {
   transform: scale(1.1);
 }
 
-.PlayerControl:active{
+.PlayerControl:active {
   padding: 0.5rem;
   background-color: rgba(255,255,255,0.1);
   border-radius: 1rem;
 }
 
-.nav{
+.nav {
   position: fixed;
   background: #333;
   display: flex;
@@ -86,18 +85,18 @@ html, body{
   height: 7%;
 }
 
-.nav a{
+.nav a {
   color: inherit;
   text-decoration: none;
 }
 
-.nav h1{
+.nav h1 {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
 }
 
-.nav input{
+.nav input {
   margin: 1rem;
   height: 1.5rem;
   width: 15rem;
@@ -106,7 +105,7 @@ html, body{
   padding-right: 1rem;
 }
 
-.nav img{
+.nav img {
   position: absolute;
   right: 9%;
   width: 22px;
@@ -115,15 +114,15 @@ html, body{
   transition: transform 0.5s ease-in-out;
 }
 
-.nav img:hover{
+.nav img:hover {
   transform: Scale(1.15);
 }
 
-.LogoContainer{
+.LogoContainer {
   font-size: 1rem;
 }
 
-.SearchContainer{
+.SearchContainer {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
@@ -142,12 +141,12 @@ html, body{
   bottom: 0.2%;
 }
 
-.SongContainer img{
+.SongContainer img {
   width: 3rem;
   border-radius: 50%;
 }
 
-.SongContainer ul{
+.SongContainer ul {
   margin: 0;
   padding-left: 1rem;
   display: block;
@@ -157,19 +156,19 @@ html, body{
   overflow: hidden;
 }
 
-.SongContainer p{
+.SongContainer p {
   color: white;
   padding-left: 2rem;
 }
 
-.VolumeContainer{
+.VolumeContainer {
   position: fixed;
   right: 1rem;
   display: flex;
   align-items: center;
 }
 
-.VolumeSlider{
+.VolumeSlider {
   width: 200px;
   height: 4px;
   background-color: #888888;
@@ -192,29 +191,32 @@ html, body{
   border-radius: 50%;
 }
 
-.VolumeIcon{
+.VolumeIcon {
   width: 40px;
   height: auto;
 }
 
-.TimelineContainer{
+.TimelineContainer {
   margin: 0;
   padding: 0;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 2.6rem;
   height: 50%;
   width: 100%;
 }
 
-.Timeline{
+.Timeline {
+  display: flex;
+  margin-left: -0.01rem;
   width: 100%;
   background-color: #888888;
-  border-radius: 2px;
   outline: none;
   appearance: none;
 }
 
-.Timeline::-webkit-slider-thumb{
+.Timeline::-webkit-slider-thumb {
   appearance: none;
   width: 10px;
   height: 10px;
@@ -223,12 +225,12 @@ html, body{
   cursor: pointer;
 }
 
-.Timeline::-webkit-slider-thumb:hover{
+.Timeline::-webkit-slider-thumb:hover {
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
-.Timeline::-webkit-slider-runnable-track{
+.Timeline::-webkit-slider-runnable-track {
   height: 10px;
 }
 
@@ -239,7 +241,7 @@ html, body{
     height: 10%;
   }
 
-  .ControlContainer {
+  .ControlContainer, .SongContainer, .VolumeContainer, .TimelineContainer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
