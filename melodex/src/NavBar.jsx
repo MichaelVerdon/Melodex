@@ -21,7 +21,9 @@ const NavBar = () => {
                 </ul>
                 <div className="SearchContainer">
                     <input/>
-                    <img src="../images/nav/search.svg" className="Search"/>
+                    <a href='/search'>
+                        <img src="../images/nav/search.svg" className="Search"/>
+                    </a>
                 </div> 
                 <ul className="navList">
                     <a href='/playlists'>

@@ -34,6 +34,7 @@ function App() {
           <Route path='/discover' element={<Discover/>}></Route>
           <Route path='/search' element={<Search/>}></Route>
           <Route path='/signin' element={<SignIn/>}></Route>
+          <Route path='/search' element={<Search/>}></Route>
         </Routes>
       </NavBar>
       <Player Song={testSong} Time={Time}/>
