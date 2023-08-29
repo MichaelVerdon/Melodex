@@ -122,6 +122,19 @@ html, body {
   font-size: 1rem;
 }
 
+.searchList{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-right: 1rem;
+}
+
+.searchList li{
+  color: white;
+  cursor: pointer;
+}
+
 .SearchContainer {
   position: absolute;
   right: 50%;
