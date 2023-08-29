@@ -125,9 +125,10 @@ html, body {
 .searchList{
   list-style: none;
   display: flex;
+  position: absolute;
+  left: 10%;
   justify-content: space-between;
   gap: 2rem;
-  padding-right: 1rem;
 }
 
 .searchList li{
@@ -144,6 +145,20 @@ html, body {
   justify-content: center;
   height: 100%;
   object-fit: contain;
+}
+
+.navList {
+  position: relative;
+  padding-right: 1rem;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.navList li{
+  color: white;
 }
 
 .SongContainer{

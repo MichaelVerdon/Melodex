@@ -1,6 +1,15 @@
 import './App.css';
 import Player from './Player';
 import NavBar from './NavBar';
+import { Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Home.js';
+import LikedSongs from './pages/Liked.js';
+import Playlists from './pages/Playlists.js';
+import Discover from './pages/Discover.js';
+import Search from './pages/Search.js';
+import SignIn from './pages/SignIn.js';
+
 
 function App() {
 
@@ -17,8 +26,18 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+      <NavBar>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/playlists' element={<Playlists/>}></Route>
+          <Route path='/liked' element={<LikedSongs/>}></Route>
+          <Route path='/discover' element={<Discover/>}></Route>
+          <Route path='/search' element={<Search/>}></Route>
+          <Route path='/signin' element={<SignIn/>}></Route>
+        </Routes>
+      </NavBar>
       <Player Song={testSong} Time={Time}/>
+      
     </>
   );
 }

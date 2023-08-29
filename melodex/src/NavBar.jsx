@@ -18,14 +18,34 @@ const NavBar = () => {
                 <ul className="searchList">
                     <li>YouTube</li>
                     <li>SoundCloud</li>
-                    {signedIn ? 
-                    <button onClick={signUserIn}>Sign In</button> :
-                    <button onClick={signUserIn}>Sign Out</button>}
                 </ul>
                 <div className="SearchContainer">
                     <input/>
                     <img src="../images/nav/search.svg" className="Search"/>
-                </div>      
+                </div> 
+                <ul className="navList">
+                    <a href='/playlists'>
+                        <li>Playlists</li>
+                    </a>
+                    <a href='/liked'>
+                        <li>Liked Songs</li>
+                    </a>
+                    <a href='/discover'>
+                        <li>Discover</li>
+                    </a>
+                    <li>
+                    {
+                    signedIn ?
+                    <a href='/signin'>
+                    <button onClick={signUserIn}>Sign In</button> 
+                    </a> 
+                    :
+                    <a href='/'>
+                    <button onClick={signUserIn}>Sign Out</button>
+                    </a>
+                    }
+                    </li>        
+                </ul>     
             </nav>
         </>
     )

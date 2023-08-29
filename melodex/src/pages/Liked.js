@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Playlists() {
+export default function Liked() {
     return(
         <>
-        <h1>Playlists</h1>
+        <h1>Liked</h1>
         </>
     )
 }
