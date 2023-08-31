@@ -1,12 +1,21 @@
 import { useState } from 'react';
+import './App.css';
 
 const NavBar = () => {
 
     const [signedIn, signIn] = useState(false);
+    // True for YouTube and False for Soundcloud
+    const [searchMode, toggleSearch] = useState(true);
 
     const signUserIn = () => {
         signIn(!signedIn);
     }
+
+    const switchSearch = () => {
+        toggleSearch(!searchMode);
+        console.log("switched search")
+    }
+
     return(
         <>
             <nav className="nav">
@@ -15,9 +24,39 @@ const NavBar = () => {
                         <h1>Melodex</h1>
                     </a>
                 </div>
-                <ul className="searchList">
-                    <li>YouTube</li>
-                    <li>SoundCloud</li>
+                <ul className="SearchList">
+                    
+                    {
+                    // YouTube
+                    searchMode ?
+                    <li 
+                    onClick={switchSearch}
+                    className='SearchActive'>
+                    YouTube
+                    </li> :
+                    <li 
+                    onClick={switchSearch}
+                    className='SearchInactive'>
+                    YouTube
+                    </li>
+                    // This looks horrible but its the only way it works
+                    }
+                    
+                    {
+                    // SoundCloud
+                    searchMode ?
+                    <li 
+                    onClick={switchSearch}
+                    className='SearchInactive'>
+                    SoundCloud
+                    </li> :
+                    <li 
+                    onClick={switchSearch}
+                    className='SearchActive'>
+                    SoundCloud
+                    </li>
+                    // This looks horrible but its the only way it works
+                    }
                 </ul>
                 <div className="SearchContainer">
                     <input/>
