@@ -34,7 +34,7 @@ class YouTube:
                 "thumbnail":thumbnail
             }
             results.append(result)
-        #print(json.dumps(results))
+        print(json.dumps(results))
         return json.dumps(results)
         
 
